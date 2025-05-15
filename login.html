@@ -1,0 +1,106 @@
+<html>
+<head>
+  <title>Commons - Stay Connected</title>
+  <link rel="stylesheet" href="Commons.css">
+
+   <!-- tsParticles Confetti Preset for Login Submission -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+</head>
+<body>
+    <!-- tsParticles JS Library (for background container)-->
+    <div id="tsparticles"></div>
+
+    <!-- Commons Logo -->
+  <div class="logo-container">
+    <img src="https://static-00.iconduck.com/assets.00/people-hugging-emoji-1730x2048-gxmglyi8.png" alt="Logo of People Hugging">
+    <span class="web-name">Commons.</span>
+  </div>
+
+
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <p class="subheading">Stay connected with your coworkers outside of the office.</p>
+    <form id="loginForm">
+      <input type="text" id="username" name="username" placeholder="Username" required />
+      <input type="password" id="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="signup-link">Don't have an account? <a href="newuser.html">Sign up!</a></p>
+  </div>
+
+    <!-- Redirect to homepage after login -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = 'home.html';
+    });
+  </script>
+
+    <!--Configuring tsParticles -->
+
+<script>
+  // Function to launch confetti once
+  function launchConfetti() {
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: 9999 },
+      particles: {
+        number: { value: 0 },
+        color: { value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"] },
+        shape: {
+          type: ["circle", "square", "triangle", "polygon", "star"],
+          options: { polygon: { sides: 5 } }
+        },
+        opacity: {
+          value: 1,
+          animation: { enable: true, speed: 0.5, minimumValue: 0.1, sync: false }
+        },
+        size: {
+          value: 7,
+          random: { enable: true, minimumValue: 3 },
+          animation: { enable: true, speed: 5, minimumValue: 0.1, sync: false, startValue: "random", destroy: "max" }
+        },
+        life: { duration: { sync: true, value: 3 }, count: 1 },
+        move: {
+          enable: true,
+          gravity: { enable: true, acceleration: 10 },
+          speed: { min: 20, max: 40 },
+          decay: 0.1,
+          direction: "bottom",
+          outModes: { default: "destroy", top: "none" },
+          tilt: { enable: true, direction: "random", moveSpeed: 60, value: { min: 0, max: 360 } },
+          roll: { darken: { enable: true, value: 30 }, enable: true, speed: { min: 15, max: 25 } },
+          wobble: { distance: 30, enable: true, speed: { min: -15, max: 15 } }
+        }
+      },
+      emitters: {
+        direction: "top",
+        life: { count: 1, duration: 0.3, delay: 0 },
+        rate: { delay: 0.05, quantity: 30 },
+        size: { width: 100, height: 0 },
+        position: { x: 50, y: 100 }
+      }
+    });
+
+    // Remove confetti after ~3.5 seconds
+    setTimeout(() => {
+      tsParticles.domItem(0).destroy();
+    }, 3500);
+  }
+
+  // Handle form submit
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Set a flag so home page knows to show confetti
+  sessionStorage.setItem('showConfetti', 'true');
+
+  window.location.href = 'home.html';
+});
+
+</script>
+
+
+</body>
+</html>
