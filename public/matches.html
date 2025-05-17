@@ -1,0 +1,26 @@
+<!-- public/matches.html -->
+<html>
+<head>
+  <title>Matches</title>
+</head>
+<body>
+  <h1>Your Matches</h1>
+  <ul id="matchesList"></ul>
+
+  <script>
+    const currentUser = localStorage.getItem('currentUser');
+
+    fetch(`/api/users/${currentUser}/matches`)
+      .then(res => res.json())
+      .then(matches => {
+        const list = document.getElementById('matchesList');
+        matches.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = `${user.name} - [${user.interests.join(', ')}]`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
+

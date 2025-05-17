@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Connections | Commons</title>
+  <link rel="stylesheet" href="Commons.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="https://static-00.iconduck.com/assets.00/people-hugging-emoji-1730x2048-gxmglyi8.png" alt="Logo of People Hugging">
+      <span class="web-name">Commons.</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="connections.html">Connections</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Find Coworkers With Similar Interests</h2>
+    <form id="connection-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <label for="interests">Select Your Interests:</label>
+      <select id="interests" multiple required>
+        <option value="Hiking">Hiking</option>
+        <option value="Reading">Reading</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Cooking">Cooking</option>
+        <option value="Music">Music</option>
+      </select>
+      <button type="submit">Connect</button>
+    </form>
+
+    <button id="view-matches">View My Matches</button>
+    <ul id="matches-list"></ul>
+  </main>
+
+  <script src="connections.js"></script>
+</body>
+</html>
