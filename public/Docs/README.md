@@ -16,7 +16,7 @@ They know technical terms and have general knowledge about web applications, but
 You need to provide a technical document so that future developers can start setting up the application on their local machines, and keep working on the system development after you leave the team.
 
 # Developers Manual
-Developer access to Commons will require downloading each file under this project directory to your local machine. However, it is suggested to create a duplicate local github repository to upload all od the programming files for easy access and updates. 
+Developer access to Commons will require downloading each file under this project directory to your local machine. However, it is suggested to create a duplicate local github repository to upload all of the programming files for easy access and updates. 
 
 ## Application Design
 
@@ -37,6 +37,12 @@ In order to run this application on a server you must open the command prompt an
 Throughout the application, there are several tests written to catch errors that arised during development. These tests will run automatically and do not require additional instruction on how to run them. If any errors present themselves with or without the tests, refer to the test code or the console log to understand the meaning of the error.
 
 ## APIs & Future Developmemnt
+The application utilizes three API endpoints for the main functionality of the application. The API's functionality and purpose is listed below.
+
+### `POST /api/users`
+This endpoint adds a new user to the database when entered in the connections.html server page. The information entered in the database will include the name and interest(s). It functions by receieving the name and interests from the frontend application, converting the data into an array (as needed), inserts the data into Supabase and catches errors (as needed).
+
+
 - The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do
 - A clear set of expectations around known bugs and a road-map for future development.
 
