@@ -5,7 +5,7 @@ Commons is a social media platform that allows coworkers within the same company
 The application is mainly supported on desktop browsers, specifically google chrome or microsoft edge. However, the application 
 can maintain its functionality on ios.
 
-Developers manial can be found at the bottom half of this file.
+Developers manual can be found below.
 
 # Developers Manual
 Developer access to Commons will require downloading each file under this project directory to your local machine. However, it is suggested to create a duplicate local github repository to upload all of the programming files for easy access and updates. 
@@ -18,9 +18,10 @@ In addition to the programming files, the developers will be required to downloa
 - Node --> For REST APIs and Servers
 - VSCode (Optional) --> code editior utilized
 
-Each dependency listed above has a website associated with it that lists the installation requirements based on the operating system utilized. However, some of the dependencies have unique modifcations that need to be made in addition to the general installation insturctions. These modifications are in place to ensure the functionality of Commons is efficent and remains the same across all platforms. VSCode will require extensions to be added in order to properly view previews of the website. LiveServer is the preffered extension to be utilized. No other unique modifcations are required for the application or its additional dependencies.
+Each dependency listed above has a website associated with it that lists the installation requirements based on the operating system utilized. However, some of the dependencies have unique modifcations that need to be made in addition to the general installation instructions. These modifications are in place to ensure the functionality of Commons is efficent and remains the same across all platforms. VSCode will require extensions to be added in order to properly view previews of the website. LiveServer is the prefered extension to be utilized. No other unique modifcations are required for the application or its additional dependencies.
 
 ## Server Infromation
+*These instructions assume Node is downloaded and installged with the `package.json` file*
 In order to run this application on a server you must open the command prompt and verify you are in the directory with all of the Commons programming files. Next you will enter `node server.js` which runs the server associated with Commons. DO NOT modify server.js for the initial run. It is important that there is verification that the server works on the Developers application before making modifications. 
 
 ## Error Tests
@@ -47,5 +48,5 @@ Additionally, it is expected of the developer to use the `GET /api/users` endpoi
 
 Additionally, there should be more fields added in the new user page to include information about the employees role at the company. This information should also be included on the accessible database page. Then, by including more distingusihing features for each user, the users can be sorted by category (ex. interests, role in company, hobbies etc.) in the database, allowing for users to filter when desired. 
 
-Finally, consider incorporating a logout option that would appear globally on each global navigation similar to the comapny logo. This way users can return to the login page when they are finished.
+Finally, consider incorporating a logout option that would appear globally on each global navigation similar to the company logo. This way users can return to the login page when they are finished.
 
