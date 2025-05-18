@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
   const selected = Array.from(document.getElementById('interests').selectedOptions)
     .map(option => option.value);
 
-  const res = await fetch('http://localhost:3000/api/users', {
+  const res = await fetch('https://commons-inst377-final-project.onrender.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, interests: selected })
@@ -25,7 +25,7 @@ viewMatchesBtn.addEventListener('click', async () => {
     return;
   }
 
-  const res = await fetch(`http://localhost:3000/api/match/${name}`);
+  const res = await fetch(`https://commons-inst377-final-project.onrender.com/api/match/${name}`);
   const matches = await res.json();
 
   matchesList.innerHTML = matches.map(u =>
