@@ -113,5 +113,5 @@ app.get('/api/match/:name', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at https://commons-inst377-final-project.onrender.com:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
