@@ -1,22 +1,20 @@
 # 377-Final-Project
-Final Project for UMD INST 377
+Commons | Social Media for the Workplace
 
-Title of your Project
+Commons is a social media platform that allows coworkers within the same company to remain connected with each other virtually. Through having an account on Commons they are able to interact with the platform and specify their hobbies and interests outside of the office in order to connect with peers with the same interests.
 
-Description of your project
+The application is mainly supported on desktop browsers, specifically google chrome or microsoft edge. However, the application 
+can maintain its functionality on ios.
 
-Description of target browser (ios? android? which ones)
+Developers manial can be found at the bottom half of this file.
 
-link to developers manual
-
-(developers manual = bottom half of read me)
 The audience of this document is future developers who will take over your system.
 
 They know technical terms and have general knowledge about web applications, but do not have knowledge about your system design.
 
 You need to provide a technical document so that future developers can start setting up the application on their local machines, and keep working on the system development after you leave the team.
 
-Your Developer Manual covers:
+# Developers Manual
 - How to install your application and all dependencies
 - How to run your application on a server
 - How to run any tests you have written for your software
