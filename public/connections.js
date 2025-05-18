@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
   const selected = Array.from(document.getElementById('interests').selectedOptions)
     .map(option => option.value);
 
-  const res = await fetch('https://commons-inst377-final-project.onrender.com', {
+  const res = await fetch('http://localhost:3000/api/users', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, interests: selected })
